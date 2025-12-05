@@ -38,6 +38,11 @@ main {
     left: 5em;
 }
 
+.heroButt {
+    inset-inline-start: 50%;
+    transform: translate(-30%);
+}
+
 .sectTitle {
     font-family: 'Staatliches', sans-serif;
     margin-bottom: 2em;
