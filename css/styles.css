@@ -2,80 +2,159 @@ nav {
     font-family: 'Staatliches', sans-serif;
 }
 
-main {
-    background-image: url('../imgs/mainBG.jpg');
-    background-color: rgba(255, 255, 255, 0.95);
-    background-blend-mode: overlay;
+body{
+  font-family: 'Lexend Deca', sans-serif;
 }
 
-#topCont {
-    top: 3em; 
-    border-color: #51f1a5;
-    border-style: solid;
-    border-width: 1rem;
-    background-image: url('../imgs/heroBG.jpg');
-    background-color: rgba(255, 255, 255, 0.7);
-    background-blend-mode: overlay;
+#heroSect{
+  background-image: url('../imgs/heroSideBG.png');
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 
-#Projects {
-    top: 4em;
+footer{
+  margin-top: 3rem;
+  background-color: #1c1c24;
 }
 
-.conspar{
-    background-color: white; 
-    padding: 1em;
-    border-color: #51f1a5;
-    border-style: solid;
-    border-width: 0.5rem;
-    font-family: 'Lexend Deca', sans-serif;
+/* Custom overrides for the "Clean, High Contrast" look */
+
+    /* Section Spacing Utilities */
+    .section-pad {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    /* Authority Bar - Grayscale Logos */
+    .authority-logo {
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: opacity 0.3s;
+      max-height: 40px;
+      margin: 0 1.5rem;
+    }
+    .authority-logo:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+
+    /* Abstract Diagram Placeholder */
+    .diagram-circle {
+      width: 200px;
+      height: 200px;
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+    }
+    .diagram-circle::after {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border: 2px solid var(--secondary);
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-30%, -30%);
+      opacity: 0.7;
+    }
+
+    .signature{
+        padding-left: 4rem;
+        font-family: 'Zen Dots', sans-serif;
+    }
+
+    .heroText{
+        font-family: 'Lexend Deca', sans-serif;
+    }
+
+    .proofText{
+        font-family: 'Staatliches', sans-serif;
+        color: #131415;
+    }
+
+    .sectHead{
+      font-family: 'Staatliches', sans-serif;
+      padding-top: 5rem;
+      padding-left: clamp(1rem, 5vw, 5rem);
+    }
+
+    .caseCard{
+      min-height: 40vh;
+    }
+
+    .servSect{
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+
+/* 1. Global Defaults & Light Theme */
+/* This applies to the whole page by default OR any element with class="light" */
+:root, .light, body.light {
+  --primary: #51f1a5;
+  --on-primary: #131415;
+  --primary-container: #D8D8F6;
+  --on-primary-container: #131415;
+
+  --secondary: #e9399f;
+  --on-secondary: #ffffff;
+  --secondary-container: #D8D8F6;
+  --on-secondary-container: #131415;
+
+  --tertiary: #952FEE; 
+  --on-tertiary: #ffffff;
+  --tertiary-container: #D8D8F6;
+  --on-tertiary-container: #952FEE;
+
+  --error: #e60505;
+  --on-error: #ffffff;
+
+  --background: #ffffff;
+  --on-background: #131415;
+
+  /* LIGHT SECTION DEFAULTS */
+  --surface: #ffffff;             /* Pure White Section Background */
+  --on-surface: #131415;          /* Black Text */
+  
+  /* LIGHT CARD DEFAULTS */
+  --surface-container: #F5F5F7;   /* The "Apple Grey" Card Background */
+  --on-surface-container: #131415;
 }
 
-.heroSub {
-    background-color: #e9399f; 
-    padding: 1em 3em 1em 0.5em; 
-    position: relative; 
-    left: 5em;
-}
+/* 2. Dark Theme */
+/* This applies to the Body OR any element with class="dark" */
+.dark, body.dark {
+  --primary: #51f1a5;
+  --on-primary: #131415; 
+  --primary-container: #51f1a5;
+  --on-primary-container: #23232f;
 
-.heroButt {
-    inset-inline-start: 50%;
-    transform: translate(-30%);
-}
+  --secondary: #e9399f;
+  --on-secondary: #ffffff;
+  --secondary-container: #e9399f;
+  --on-secondary-container: #ffffff;
 
-.sectTitle {
-    font-family: 'Staatliches', sans-serif;
-    margin-bottom: 2em;
-    font-size: 1.5rem;
-}
+  --tertiary: #952FEE;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #23232F;
+  --on-tertiary-container: #ffffff;
 
-.projTitle{
-    font-family: 'Staatliches', sans-serif;
-}
+  --error: #e60505;
+  --on-error: #ffffff;
 
-.projDesc{
-    font-family: 'Lexend Deca', sans-serif;
-}
+  --background: #23232F;
+  --on-background: #ffffff;
 
-#Insights {
-    top: 1em;
-    margin-bottom: 6em;
-}
+  /* DARK SECTION DEFAULTS */
+  --surface: #131415;             /* Dark Surface */
+  --on-surface: #ffffff;          /* White Text */
 
-.insightBlurb{
-    max-width: 75%;
-}
-
-.blogCTA{
-    top: 2em;
-    background-color: #51f1a5;
-    background-image: url('../imgs/cardboard.jpg');
-    background-blend-mode: darken;
-}
-
-footer {
-    padding-top: 10em;
-    background-color: #131415; 
-    font-family: 'Staatliches', sans-serif;
-    color: #fff;
+  /* DARK CARD DEFAULTS (Added this so it doesn't break if you switch back) */
+  --surface-container: #1c1c24;   /* Slightly lighter dark for cards */
+  --on-surface-container: #ffffff;
 }
